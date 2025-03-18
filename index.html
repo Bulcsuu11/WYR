@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WYR & Mi lenne ha</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="java.js"></script>
+    <style>
+        .valasz-kep {
+            max-width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+
+        .valasz {
+            flex: 1;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            cursor: pointer;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    </style>
+</head>
+<body class="oldal">
+    <div class="tartalom" id="menuTartalom">
+        <h1 class="cim">Would You Rather & Mi lenne ha</h1>
+        <button class="gomb" onclick="jatekinditasa('wyr')">Would You Rather</button>
+        <button class="gomb" onclick="jatekinditasa('whatif')">Mi lenne ha</button>
+    </div>
+
+    <div class="tartalom rejtett" id="jatekTartalom">
+        <div class="haladas">
+            <div class="haladasSav" id="haladasSav"></div>
+        </div>
+        <div class="kerdes" id="kerdes">Melyiket választanád inkább?</div>
+        <div class="valaszok">
+            <div class="valasz" style="background-color: #003cff42;" id="valaszA" onclick="valaszkivalasztasa('A')">
+                <div id="valaszASzoveg"></div>
+                <div class="statisztika" id="statisztikaA"></div>
+            </div>
+            <div class="valasz" id="valaszB" style="background-color: #ff000060;" onclick="valaszkivalasztasa('B')">
+                <div id="valaszBSzoveg"></div>
+                <div class="statisztika" id="statisztikaB"></div>
+            </div>
+        </div>
+        <button class="gomb" onclick="kovetkezokerdes()">Következő kérdés</button>
+        <button class="gomb" onclick="location.reload()">Vissza a menübe</button>
+    </div>
+</body>
+</html> 
